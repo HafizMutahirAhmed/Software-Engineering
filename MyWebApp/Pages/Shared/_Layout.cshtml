@@ -1,0 +1,32 @@
+﻿@* Pages/Shared/_Layout.cshtml *@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyWebApp</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul style="list-style:none;display:flex;gap:20px;background:#0078d7;padding:10px;">
+                <li><a asp-page="/Index" style="color:white;text-decoration:none;">Home</a></li>
+                <li><a asp-page="/Login" style="color:white;text-decoration:none;">Login</a></li>
+                <li><a asp-page="/Signup" style="color:white;text-decoration:none;">Signup</a></li>
+                <li><a asp-page="/Sitemap" style="color:white;text-decoration:none;">Sitemap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main" class="container" style="padding:20px;">
+        @RenderBody()
+    </main>
+
+    <footer style="text-align:center;margin-top:50px;">
+        <p>&copy; @DateTime.Now.Year - MyWebApp</p>
+    </footer>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
